@@ -1,5 +1,5 @@
 /*
-	Overflow by HTML5 UP
+	Prologue by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
@@ -8,27 +8,16 @@
 
 	var	$window = $(window),
 		$body = $('body'),
-		settings = {
-
-			// Parallax background effect?
-				parallax: true,
-
-			// Parallax factor (lower = more intense, higher = less intense).
-				parallaxFactor: 10
-
-		};
+		$nav = $('#nav');
 
 	// Breakpoints.
 		breakpoints({
-			wide:    [ '1081px',  '1680px' ],
-			normal:  [ '841px',   '1080px' ],
-			narrow:  [ '737px',   '840px'  ],
-			mobile:  [ null,      '736px'  ]
+			wide:      [ '961px',  '1880px' ],
+			normal:    [ '961px',  '1620px' ],
+			narrow:    [ '961px',  '1320px' ],
+			narrower:  [ '737px',  '960px'  ],
+			mobile:    [ null,     '736px'  ]
 		});
-
-	// Mobile?
-		if (browser.mobile)
-			$body.addClass('is-scroll');
 
 	// Play initial animations on page load.
 		$window.on('load', function() {
@@ -37,69 +26,98 @@
 			}, 100);
 		});
 
-	// Scrolly.
-		$('.scrolly-middle').scrolly({
-			speed: 1000,
-			anchor: 'middle'
-		});
+	// Nav.
+		var $nav_a = $nav.find('a');
 
-		$('.scrolly').scrolly({
-			speed: 1000,
-			offset: function() { return (breakpoints.active('<=mobile') ? 70 : 190); }
-		});
+		$nav_a
+			.addClass('scrolly')
+			.on('click', function(e) {
 
-	// Parallax background.
+				var $this = $(this);
 
-		// Disable parallax on IE/Edge (smooth scrolling is jerky), and on mobile platforms (= better performance).
-			if (browser.name == 'ie'
-			||	browser.name == 'edge'
-			||	browser.mobile)
-				settings.parallax = false;
+				// External link? Bail.
+					if ($this.attr('href').charAt(0) != '#')
+						return;
 
-		if (settings.parallax) {
+				// Prevent default.
+					e.preventDefault();
 
-			var $dummy = $(), $bg;
+				// Deactivate all links.
+					$nav_a.removeClass('active');
 
-			$window
-				.on('scroll.overflow_parallax', function() {
+				// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
+					$this
+						.addClass('active')
+						.addClass('active-locked');
 
-					// Adjust background position.
-						$bg.css('background-position', 'center ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px');
+			})
+			.each(function() {
 
-				})
-				.on('resize.overflow_parallax', function() {
+				var	$this = $(this),
+					id = $this.attr('href'),
+					$section = $(id);
 
-					// If we're in a situation where we need to temporarily disable parallax, do so.
-						if (breakpoints.active('<=narrow')) {
+				// No section for this link? Bail.
+					if ($section.length < 1)
+						return;
 
-							$body.css('background-position', '');
-							$bg = $dummy;
+				// Scrollex.
+					$section.scrollex({
+						mode: 'middle',
+						top: '-10vh',
+						bottom: '-10vh',
+						initialize: function() {
+
+							// Deactivate section.
+								$section.addClass('inactive');
+
+						},
+						enter: function() {
+
+							// Activate section.
+								$section.removeClass('inactive');
+
+							// No locked links? Deactivate all links and activate this section's one.
+								if ($nav_a.filter('.active-locked').length == 0) {
+
+									$nav_a.removeClass('active');
+									$this.addClass('active');
+
+								}
+
+							// Otherwise, if this section's link is the one that's locked, unlock it.
+								else if ($this.hasClass('active-locked'))
+									$this.removeClass('active-locked');
 
 						}
+					});
 
-					// Otherwise, continue as normal.
-						else
-							$bg = $body;
+			});
 
-					// Trigger scroll handler.
-						$window.triggerHandler('scroll.overflow_parallax');
+	// Scrolly.
+		$('.scrolly').scrolly();
 
-				})
-				.trigger('resize.overflow_parallax');
+	// Header (narrower + mobile).
 
-		}
+		// Toggle.
+			$(
+				'<div id="headerToggle">' +
+					'<a href="#header" class="toggle"></a>' +
+				'</div>'
+			)
+				.appendTo($body);
 
-	// Poptrox.
-		$('.gallery').poptrox({
-			useBodyOverflow: false,
-			usePopupEasyClose: false,
-			overlayColor: '#0a1919',
-			overlayOpacity: 0.75,
-			usePopupDefaultStyling: false,
-			usePopupCaption: true,
-			popupLoaderText: '',
-			windowMargin: 10,
-			usePopupNav: true
-		});
+		// Header.
+			$('#header')
+				.panel({
+					delay: 500,
+					hideOnClick: true,
+					hideOnSwipe: true,
+					resetScroll: true,
+					resetForms: true,
+					side: 'left',
+					target: $body,
+					visibleClass: 'header-visible'
+				});
 
 })(jQuery);
