@@ -9,6 +9,7 @@ theme:
     palette:
           scheme: default
           primary: blue grey
+          accent: teal
     # features:
         # - navigation.sections
         # - toc.integrate

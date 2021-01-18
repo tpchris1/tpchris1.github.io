@@ -14,10 +14,10 @@ hide: navigation # Hide navigation
 
 ## Index
 1. [FROZEN](frozen/frozen.md) - Freeze your impulse to buy
-2. NSFW Detection - Not Safe For Work content detection API
+2. [NSFW Detection](nsfw_detection/nsfw_detection.md) - Not Safe For Work content detection API
 3. The Tank Series - The Ultimate Tank
-    - Gen1 - FPGA-based 
-    - Gen2 - Arduino-based
+    - [Gen1 - FPGA-based](the_tank/the_tank_fpga.md) 
+    - [Gen2 - Arduino-based](the_tank/the_tank_arduino.md)
 4. 
 
 [Back to Home Page](https://tpchris1.github.io/){: .md-button }
