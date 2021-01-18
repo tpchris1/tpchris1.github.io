@@ -6,6 +6,9 @@ site_url:
 theme: 
     name: material 
     language: zh-TW
+    palette:
+          scheme: default
+          primary: blue grey
     # features:
         # - navigation.sections
         # - toc.integrate
