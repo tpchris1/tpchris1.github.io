@@ -13,6 +13,8 @@
         <meta name="author" content="Chris Chang">
       
       
+        <link rel="canonical" href="https://tpchris1.github.io/portfolio/site/index.html/nsfw_detection/nsfw_detection/">
+      
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.5">
     
@@ -79,7 +81,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="../.." title="Chris&#39;s Portfolio" class="md-header-nav__button md-logo" aria-label="Chris's Portfolio">
+    <a href="https://tpchris1.github.io/portfolio/site/index.html" title="Chris&#39;s Portfolio" class="md-header-nav__button md-logo" aria-label="Chris's Portfolio">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -159,7 +161,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Chris&#39;s Portfolio" class="md-nav__button md-logo" aria-label="Chris's Portfolio">
+    <a href="https://tpchris1.github.io/portfolio/site/index.html" title="Chris&#39;s Portfolio" class="md-nav__button md-logo" aria-label="Chris's Portfolio">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -308,6 +310,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#concept" class="md-nav__link">
+    Concept
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#github-links" class="md-nav__link">
     Github Links
   </a>
@@ -423,6 +432,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#concept" class="md-nav__link">
+    Concept
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#github-links" class="md-nav__link">
     Github Links
   </a>
@@ -447,7 +463,22 @@
 <h2 id="introduction">Introduction</h2>
 <ol>
 <li>The NSFW Detection is a RESTful API which can identify adult content through a CNN-model</li>
+<li>The NSFW Detection is built with Django</li>
+<li>The NSFW Detection is containerized into Dockerfile and docker-compose, so you can deploy them in any docker-installed instance</li>
 </ol>
+<h2 id="concept">Concept</h2>
+<ol>
+<li>The NSFW Detection uses the <a href="https://github.com/mdietrichstein/tensorflow-open_nsfw">Tensorflow Implementation of Yahoo's Open NSFW Model</a> to act as the detector</li>
+<li>When NSFW Detection receives an API request, it would first be distributed through Nginx</li>
+<li>Then the uwsgi would receive the data from Nginx so Django may be able to process the info</li>
+<li>The Django engine would identify the input type, e.g. url, image or base64 and issue them to relative corresponding serializers</li>
+<li>Serializers would then preprocessing each image and use the detection model to detect the image</li>
+<li>Then the result which contains file_name, user_id, test_score and etc. would be returned </li>
+<li>The NSFW Detection also has an admin backstage which can be access through browser and monitor the status of the detection status</li>
+<li>The NSFW Detection can deal high-concurrency problems using Nginx</li>
+<li>The average response time is 3~4 seconds</li>
+</ol>
+<p><img alt="" src="../Pics/structure.drawio.png" /></p>
 <h2 id="github-links">Github Links</h2>
 <ol>
 <li>https://github.com/tpchris1/nsfw_detection</li>
