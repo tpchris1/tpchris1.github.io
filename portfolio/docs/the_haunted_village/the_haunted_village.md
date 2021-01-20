@@ -1,4 +1,4 @@
-# The Tank Gen1 - FPGA Based
+# The Haunted Village
 
 ##### *A Lego Tank!!*
 

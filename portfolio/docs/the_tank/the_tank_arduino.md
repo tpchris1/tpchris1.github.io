@@ -50,3 +50,9 @@
 
 5. Development Phase 5: Moving 
 <iframe src="https://drive.google.com/file/d/1gB1mzGJt9HmFnv_Klw5IjJR7N64vAoIX/preview" width="640" height="480"></iframe>
+
+## My role in the project
+1. This is the final project of the course *Intro. to Embedded System*  
+2. I am responsible for all of the implementation of the tasks including Lego mechanism, circuits and motors and programming over Arduino
+
+## Conclusion

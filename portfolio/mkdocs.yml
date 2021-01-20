@@ -36,18 +36,14 @@ markdown_extensions:
 # extra_javascript:
     # - https://unpkg.com/mermaid/dist/mermaid.min.js
 
-# nav:
-# - '配置XE8 C++ Builder環境':
-#     - 'Focus 在XE8下如何設置環境並運行' : 'XE8_env_setup/Focus_env_setup_under_XE8.md'
-# - '系統架構':
-#     - [基礎系統架構與名詞解釋](sys_archi/sys_archi.md)
-#     - [範例code解釋](sys_archi/test_program_sample_analysis.md)
-# 4. 參考文檔
-#     - [G5000 Application Manual](reference/G5000%20Application%20Manual.pdf)
-#     - [G5000 Users Guide](reference/G5000_Users_Guide.pdf)
-#     - [FOCUS help html manual](reference/Focus_help_manual/index.htm)
-#     - [74hc373 datasheet](reference/cd54hc373.pdf)
-# 5. 其他文檔
-#     - [Bob Focus Study ppt](other_files/Focus%20Study20190224.ppt)
-#     - [UML_for_XE8_User_Guide](other_files/UML_learning/UML_user_guide/UML_for_XE8_User_Guide.md)
-# 6. [Q&A匯總](q&a/q&a_all.md)
+nav: 
+- 'Home' : 'index.md'
+- 'FROZEN' : 'frozen/frozen.md' 
+- 'NSFW Detection' : 'nsfw_detection/nsfw_detection.md' 
+- The Tank Series:
+    -  'Gen2 - Arduino-based'  : 'the_tank/the_tank_arduino.md'
+    -  'Gen1 - FPGA-based'  : 'the_tank/the_tank_fpga.md' 
+- 'Modeling user willingness of data contribution in online social networks' : 'modeling_user_willingness/modeling_user_willingness.md' 
+- 'Gender Differences on StackOverflow' : 'gender_differences_on_stackoverflow/gender_differences_on_stackoverflow.md' 
+- 'The Haunted Village' : 'the_haunted_village/the_haunted_village.md'
+- 'deepeye_pack' : 'deepeye_pack/deepeye_pack.md' 
