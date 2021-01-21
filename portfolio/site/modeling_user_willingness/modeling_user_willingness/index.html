@@ -351,6 +351,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#flowchart" class="md-nav__link">
+    Flowchart
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#current-research-comparioson" class="md-nav__link">
+    Current Research Comparioson
+  </a>
+  
+    <nav class="md-nav" aria-label="Current Research Comparioson">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-consent-analysis" class="md-nav__link">
+    User Consent Analysis
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -363,6 +390,13 @@
   
     <nav class="md-nav" aria-label="Implementation Process">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-collection" class="md-nav__link">
+    Data collection
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#data-preprocessing" class="md-nav__link">
@@ -379,14 +413,28 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#refining" class="md-nav__link">
-    Refining
+  <a href="#performance-conclusion" class="md-nav__link">
+    Performance Conclusion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#active-learning" class="md-nav__link">
+    Active Learning
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
   
 </li>
       
@@ -520,6 +568,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#flowchart" class="md-nav__link">
+    Flowchart
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#current-research-comparioson" class="md-nav__link">
+    Current Research Comparioson
+  </a>
+  
+    <nav class="md-nav" aria-label="Current Research Comparioson">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-consent-analysis" class="md-nav__link">
+    User Consent Analysis
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -532,6 +607,13 @@
   
     <nav class="md-nav" aria-label="Implementation Process">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-collection" class="md-nav__link">
+    Data collection
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#data-preprocessing" class="md-nav__link">
@@ -548,14 +630,28 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#refining" class="md-nav__link">
-    Refining
+  <a href="#performance-conclusion" class="md-nav__link">
+    Performance Conclusion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#active-learning" class="md-nav__link">
+    Active Learning
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
   
 </li>
       
@@ -601,14 +697,144 @@
 <li>What is the relationship between the user willingness and their public data?</li>
 <li>Generally there are ground truth for questions to be solved by ML models, however, is there such a ground truth in our question?</li>
 <li>The young people are more likely to receive our survey instead of the elder ones. Will this cause any bias problem?</li>
+<li>Lots of values on the public data would be missing, is it possible to solve the problem through preprocessing?</li>
+<li>How to select the model and refine it to increase accuracy and eventually reach the goal?</li>
+</ol>
+<h3 id="flowchart">Flowchart</h3>
+<p>Flowchart of our model
+<img alt="" src="../Pics/2021-01-22-00-03-36.png" /></p>
+<h2 id="current-research-comparioson">Current Research Comparioson</h2>
+<blockquote>
+<p>Social network now plays an important role in everyone's life, therefore the protection of eyeryone's data becomes an important question. The following paragraph will focus solely on the relationship between user willingness and their behavior and data</p>
+</blockquote>
+<h3 id="user-consent-analysis">User Consent Analysis</h3>
+<ol>
+<li>The elements which affect social group willingness are as following:</li>
+<li>Privacy Paradox <ul>
+<li>Users care about their privacy when asked about, but they don't protect their privacy enough on the Internet </li>
+</ul>
+</li>
+<li>Perceived Privacy<ul>
+<li>Users' perception of privacy danger differ from the actual danger</li>
+</ul>
+</li>
+<li>Context<ul>
+<li>Users' more likely to trade their private data for services or benefits</li>
+</ul>
+</li>
+<li>Culture<ul>
+<li>Different culture treats privacy differently</li>
+</ul>
+</li>
+<li>User Diversity<ul>
+<li>Users' education background, personality and etc. affect how they react to privacy protection</li>
+</ul>
+</li>
+<li>Gender<ul>
+<li>Different gender treats privacy with different attitude</li>
+</ul>
+</li>
+<li>We would conduct our research according to the above aspects in a data science perspective</li>
 </ol>
 <h2 id="implementation-process">Implementation Process</h2>
+<h3 id="data-collection">Data collection</h3>
+<ol>
+<li>Collect the users' willingness  through survey over Faceboook regarding:</li>
+<li>Whether they are willing to give their public account information to academic experiemnts without payment</li>
+<li>Whether they are willing to give their public account information to academic experiemnts with payment</li>
+<li>Whether they are willing to give their private account information to academic experiemnts without payment</li>
+<li>Whether they are willing to give their private account information to academic experiemnts with payment</li>
+<li>The survevry is distributed on multi different platform and channel to achieve as little bias as possible.</li>
+<li>Crawl the data according to users' willingness. Mostly their public account information such as  </li>
+<li>personal data</li>
+<li>friend list</li>
+<li>liked posts</li>
+<li>number of posts</li>
+<li>We used <em>selenium</em> and <em>Beautiful Soup</em> and several bot afcebook accounts to crawl the above mentioned data</li>
+<li>The active data like posts and likes are crawled in a limited time frame </li>
+</ol>
 <h3 id="data-preprocessing">Data Preprocessing</h3>
+<ol>
+<li>The dimension of the raw data is quite high - for over 37 different attributes including educational background, working experience, birthday and etc.</li>
+<li>The raw data also has a quite high percentage of missing values. If one attribute has too high missing value, it will be removed. If low missing value, interpolation is used to fill up the missing value</li>
+<li>For Example, User ID is removed because it does not provide any meaning</li>
+<li>The raw data is then categorized using nominal feature, ordinal feature and temporal feature.</li>
+<li>If features are being too similar, we would combine the features together</li>
+<li>For nominal features, one-hot encoding is applied to remove bias. For some of the ordinal features, total and frequency over time can be calculated. As for the temporal features, most of these are binned up by a week or a month </li>
+<li>We categorized users' hometown and living place according to continentals using GeoMapping and Google Maps API. </li>
+<li>We sorted the educational backgrounds according to the QS and similar ranking standards</li>
+<li>The raw data is then divided into train data and test data using K-fold cross validation</li>
+<li>The raw data is scaled standardized and normalized as well</li>
+<li>The feature selection and extraction were then applied to the raw data. Such as Sequential Backward Selection to remove noises and LDA can select important features.</li>
+</ol>
 <h3 id="training">Training</h3>
-<h3 id="refining">Refining</h3>
+<ol>
+<li>We selected several models such as SVM, random forest, adaboost and xgboost which fits better with smaller dataset</li>
+<li>We applied SMOTE to do upsampling to balance the ratio of the positive and negative data </li>
+<li>We then use grid search to refine the parameter for the model</li>
+</ol>
+<h3 id="performance-conclusion">Performance Conclusion</h3>
+<ol>
+<li>The basic accuracy is around 72%</li>
+</ol>
+<p><img alt="" src="../Pics/2021-01-22-03-00-25.png" /></p>
+<ol>
+<li>After refining, the accuracy is now at 82%</li>
+</ol>
+<p><img alt="" src="../Pics/2021-01-22-03-00-57.png" /></p>
+<ol>
+<li>The accuracy can be further improved if more user data can be collected.</li>
+<li>Also, as described above, the users' willingness is highly related to one's personality as well, so maybe inspect the content of the posts to identify the personality would be a good break.</li>
+</ol>
+<h3 id="active-learning">Active Learning</h3>
+<ol>
+<li>As our research move on to the next level, we found out that we lack of data</li>
+<li>Our research is 'small-dataset', 'low cost to achieve non-labelled data' and 'high cost to label each data'.</li>
+<li>Therefore, it is a perfect fit for Active Learning</li>
+<li>Our plan is to crawl large data on Facebook and ask the user about his or her willingness about giving the data, which can further used on training the model itself.</li>
+</ol>
+<p><img alt="" src="../Pics/2021-01-22-03-14-59.png" /></p>
+<p>Model of the Active Learning</p>
+<ol>
+<li>The action to pick up which users to ask is called <strong>query strategy</strong></li>
+<li>The labeled data would then be feed to an AL <strong>Learner</strong></li>
+<li>There are various query strategies the unlabelled data. Besides the default methods, we implemented our own  query strategy</li>
+<li>These query strategies were combined and cross-validated through the grid-search</li>
+<li>The iteration can quickly convergent after 200 queries</li>
+<li>And the result of the different query strategies are as followed:<ul>
+<li><img alt="" src="../Pics/2021-01-22-03-12-16.png" /></li>
+<li><img alt="" src="../Pics/2021-01-22-03-16-22.png" /></li>
+<li><img alt="" src="../Pics/2021-01-22-03-16-29.png" /></li>
+<li><img alt="" src="../Pics/2021-01-22-03-16-35.png" /></li>
+<li><img alt="" src="../Pics/2021-01-22-03-16-42.png" /></li>
+</ul>
+</li>
+</ol>
+<h2 id="reference">Reference</h2>
+<ol>
+<li>Laufer, R. S. and Wolfe, M., Privacy as a concept and a social issue: Amultidimensional developmental theory, 1977.</li>
+<li>Martina Ziefle, Julian Halbey and Sylvia Kowalewski, Users’ Willingness to ShareData on the Internet: Perceived Benefits and Caveats, 2016.</li>
+<li>Jie Zhao, Chanjuan Zhu, Zhixiang Peng, Xin Xu and Yan Liu, User Willingnesstoward Knowledge Sharing in Social Networks, 2018.</li>
+<li>Catherine, M., Some antecedents and effects of trust in virtual communities, 2002.</li>
+<li>Burr Settles, Active Learning Literature Survey, 2010.</li>
+</ol>
 <h2 id="my-role-in-the-project">My role in the project</h2>
+<ol>
+<li>I am mainly responsible for the data preprocessing and model refining</li>
+<li>I refined the model to increase its accuracy for 20%</li>
+<li>Furthermore, I handled most of the implementation of the Active Learning's query strategies</li>
+</ol>
 <h2 id="conclusion">Conclusion</h2>
-<p>This Project</p>
+<ol>
+<li>This Project brought me great impact over ML</li>
+<li>Its the very first big scale ML project</li>
+<li>I not only learned the programming of ML but also the proper way of conducting research on ML-related issues</li>
+<li>The project also increased my interests on the social computing</li>
+<li>I started to be aware of the things that we missed when using the convenient services provided by the online/game companies these days</li>
+<li>When they tricked us in exchange with our priceless data, they didn't protect them and ever worse. Some of them even sell them for benefits.</li>
+<li>I am proud that I have conducted this research under my instruction professor - Professor Chih-Ya Shen</li>
+<li>And huge thanks to my colleagues 羅士鈞 and 黃竣詳 </li>
+</ol>
                 
               
               
