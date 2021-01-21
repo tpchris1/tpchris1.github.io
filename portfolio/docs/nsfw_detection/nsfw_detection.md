@@ -39,4 +39,5 @@
 
 
 ## Github Links
-1. https://github.com/tpchris1/nsfw_detection
+1. [https://github.com/tpchris1/nsfw_detection](https://github.com/tpchris1/nsfw_detection
+)

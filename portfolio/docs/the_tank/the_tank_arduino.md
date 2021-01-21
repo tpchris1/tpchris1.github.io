@@ -1,7 +1,5 @@
 # The Tank Gen2 - Arduino Based
-
 ##### *A Lego Tank!!*
-
 ## Introduction
 - This is a Arduino-based mobile Lego tank which can be controlled by an Android phone through Blynk
 - The Tank Gen2 is the upgrade version of the [Gen1 - FPGA-based one](the_tank_fpga.md)
