@@ -709,7 +709,7 @@
 </blockquote>
 <h3 id="user-consent-analysis">User Consent Analysis</h3>
 <ol>
-<li>The elements which affect social group willingness are as following:</li>
+<li>The elements which affect social group willingness are as following:<ul>
 <li>Privacy Paradox <ul>
 <li>Users care about their privacy when asked about, but they don't protect their privacy enough on the Internet </li>
 </ul>
@@ -734,22 +734,28 @@
 <li>Different gender treats privacy with different attitude</li>
 </ul>
 </li>
+</ul>
+</li>
 <li>We would conduct our research according to the above aspects in a data science perspective</li>
 </ol>
 <h2 id="implementation-process">Implementation Process</h2>
 <h3 id="data-collection">Data collection</h3>
 <ol>
-<li>Collect the users' willingness  through survey over Faceboook regarding:</li>
+<li>Collect the users' willingness  through survey over Faceboook regarding:<ul>
 <li>Whether they are willing to give their public account information to academic experiemnts without payment</li>
 <li>Whether they are willing to give their public account information to academic experiemnts with payment</li>
 <li>Whether they are willing to give their private account information to academic experiemnts without payment</li>
 <li>Whether they are willing to give their private account information to academic experiemnts with payment</li>
+</ul>
+</li>
 <li>The survevry is distributed on multi different platform and channel to achieve as little bias as possible.</li>
-<li>Crawl the data according to users' willingness. Mostly their public account information such as  </li>
+<li>Crawl the data according to users' willingness. Mostly their public account information such as  <ul>
 <li>personal data</li>
 <li>friend list</li>
 <li>liked posts</li>
 <li>number of posts</li>
+</ul>
+</li>
 <li>We used <em>selenium</em> and <em>Beautiful Soup</em> and several bot afcebook accounts to crawl the above mentioned data</li>
 <li>The active data like posts and likes are crawled in a limited time frame </li>
 </ol>

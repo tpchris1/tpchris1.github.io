@@ -25,33 +25,33 @@ Flowchart of our model
 > Social network now plays an important role in everyone's life, therefore the protection of eyeryone's data becomes an important question. The following paragraph will focus solely on the relationship between user willingness and their behavior and data
 ### User Consent Analysis
 1. The elements which affect social group willingness are as following:
-   - Privacy Paradox 
-     - Users care about their privacy when asked about, but they don't protect their privacy enough on the Internet 
-   - Perceived Privacy
-     - Users' perception of privacy danger differ from the actual danger
-   - Context
-     - Users' more likely to trade their private data for services or benefits
-   - Culture
-     - Different culture treats privacy differently
-   - User Diversity
-     - Users' education background, personality and etc. affect how they react to privacy protection
-   - Gender
-     - Different gender treats privacy with different attitude
+    - Privacy Paradox 
+        - Users care about their privacy when asked about, but they don't protect their privacy enough on the Internet 
+    - Perceived Privacy
+        - Users' perception of privacy danger differ from the actual danger
+    - Context
+        - Users' more likely to trade their private data for services or benefits
+    - Culture
+        - Different culture treats privacy differently
+    - User Diversity
+        - Users' education background, personality and etc. affect how they react to privacy protection
+    - Gender
+        - Different gender treats privacy with different attitude
 2. We would conduct our research according to the above aspects in a data science perspective
 
 ## Implementation Process
 ### Data collection
 1. Collect the users' willingness  through survey over Faceboook regarding:
-   1. Whether they are willing to give their public account information to academic experiemnts without payment
-   2. Whether they are willing to give their public account information to academic experiemnts with payment
-   3. Whether they are willing to give their private account information to academic experiemnts without payment
-   4. Whether they are willing to give their private account information to academic experiemnts with payment
+    - Whether they are willing to give their public account information to academic experiemnts without payment
+    - Whether they are willing to give their public account information to academic experiemnts with payment
+    -  Whether they are willing to give their private account information to academic experiemnts without payment
+    - Whether they are willing to give their private account information to academic experiemnts with payment
 2. The survevry is distributed on multi different platform and channel to achieve as little bias as possible.
 3. Crawl the data according to users' willingness. Mostly their public account information such as  
-   - personal data
-   - friend list
-   - liked posts
-   - number of posts
+    - personal data
+    - friend list
+    - liked posts
+    - number of posts
 4. We used *selenium* and *Beautiful Soup* and several bot afcebook accounts to crawl the above mentioned data
 5. The active data like posts and likes are crawled in a limited time frame 
 

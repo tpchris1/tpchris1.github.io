@@ -1,5 +1,5 @@
 # The Tank Gen2 - Arduino Based
-##### *A Lego Tank!!*
+##### *A STRONGER Lego Tank!!*
 ## Introduction
 - This is a Arduino-based mobile Lego tank which can be controlled by an Android phone through Blynk
 - The Tank Gen2 is the upgrade version of the [Gen1 - FPGA-based one](the_tank_fpga.md)
@@ -54,3 +54,7 @@
 2. I am responsible for all of the implementation of the tasks including Lego mechanism, circuits and motors and programming over Arduino
 
 ## Conclusion
+1. I have learned the entire Arduino system through the project
+2. The structure is still imperfect. However, the process of making the project grants me the ability to integrate various system
+3. With the numerous failure during the project, I have also learned how to "debug" in a systematic way
+4. Huge thanks to the lecturer of the course [Chung-Ta King](http://www.cs.nthu.edu.tw/~king/) and help from my roommate Kai-Chen Lin and Edward Wei Ding 

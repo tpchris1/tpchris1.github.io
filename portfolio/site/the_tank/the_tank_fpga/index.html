@@ -317,8 +317,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#analyze-process" class="md-nav__link">
-    Analyze Process
+  <a href="#feature" class="md-nav__link">
+    Feature
   </a>
   
 </li>
@@ -468,8 +468,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#analyze-process" class="md-nav__link">
-    Analyze Process
+  <a href="#feature" class="md-nav__link">
+    Feature
   </a>
   
 </li>
@@ -511,11 +511,79 @@
                 <h1 id="the-tank-gen1-fpga-based">The Tank Gen1 - FPGA Based</h1>
 <h5 id="a-lego-tank"><em>A Lego Tank!!</em></h5>
 <h2 id="introduction">Introduction</h2>
+<ol>
+<li>This is an FPGA-based mobile Lego tank which can be controlled through keyboard</li>
+<li>The FPGA is the Digilent Basys-3 Dev Kit developed under Vivado using Verilog</li>
+<li>The Tank is equipped with two 5V stepper motors powered by 4 AA 1.5V batteries</li>
+<li>The Tank is also equipped with another stepper motor to power the base of the canon which can fire Lego using solenoid</li>
+</ol>
 <h2 id="problem-research">Problem Research</h2>
-<h2 id="analyze-process">Analyze Process</h2>
+<ol>
+<li>When my teammate and I decided to start this project, we had no clue of which components or parts we were going to use</li>
+<li>But we were very clear about what our goals are<ul>
+<li>A Lego tank</li>
+<li>It can move</li>
+<li>It has a canon or turrent which can move</li>
+<li>It can fire Lego bricks </li>
+<li>It can be ccontrolled by some sort of controller</li>
+</ul>
+</li>
+<li>Based on the above goals, we wanted to verify the feasibility of these goals</li>
+<li>First of all, we wanted to verify whether our FPGA board can drive a motor with load. After several discussion, we believe that the DC motor we could bought cannot provide enough torque. Hence, we chose stepper motors to drive the Tank</li>
+<li>Therefore, we tried to power the motors through a very simple experiment with some motors, some ULN2003 drive boards and some tissue, some wire and 4 AA batteries.</li>
+</ol>
+<iframe src="https://drive.google.com/file/d/1OyoVMeKK6JjSND5akg_K3LWaHw_x1ve4/preview" width="640" height="480"></iframe>
+
+<ol>
+<li>It turned out to be pretty successful, then we can formally establish proposal of this project and go for next stage </li>
+</ol>
+<h2 id="feature">Feature</h2>
+<ol>
+<li>The Tank can move forward and backward</li>
+<li>The Tank can move left and right</li>
+<li>The Tank can rotate the canon horizontally</li>
+<li>The Tank can make sounds when firing the canon</li>
+<li>The Tank can show the current status using 7-segment display</li>
+<li>The Tank can simulate an engine start and off using FSM</li>
+<li>The sketch design of the FSM for the Tank is as below</li>
+</ol>
+<p><img alt="" src="../Pics/2021-01-23-03-44-36.png" /></p>
 <h2 id="implementation-process">Implementation Process</h2>
+<ol>
+<li>The Lego structure is the very first important thing to finish because we needed to make sure that the structure was stongr enough to load these many parts on it </li>
+<li>Therefore, the base of the Tank is as below</li>
+</ol>
+<p><img alt="" src="../Pics/2021-01-23-03-24-58.png" /><br>
+3. Our ultimate goal for the Tank to be looking like this </p>
+<p><img alt="" src="../Pics/2021-01-23-03-25-51.png" /><br>
+4. Two stepper motors is placed vertically to reduce space problem and they were connected to Lego axis as the following picture<br>
+<img alt="" src="../Pics/2021-01-23-03-42-40.png" /><br></p>
+<ol>
+<li>The stepper motors drive the belt through <a href="https://en.wikipedia.org/wiki/Bevel_gear">straight bevel gear</a></li>
+<li>After the base structure, we tested the driving system of the motors. The motors are drive through ULN2003 to magnify the signal from 3.3V to 5V</li>
+<li>The signals were set as a shifting 4-bit register to represent the 4 phases of the stepper motor. </li>
+</ol>
+<p><img alt="" src="../Pics/2021-01-23-03-48-45.png" /><br>
+8. Nevertheless, the power is not strong enough to drive all three motors including the one rotating the platform for the canon
+9. The solution was to use external power to solve the problem
+10. While my partner worked on the keyboard control and functions like LED and 7-segments, I began to work on the fire mechanism. After several research, I decided to use solenoid to pull the "trigger" for the canon
+11. The canon is built on a platform and another <a href="https://en.wikipedia.org/wiki/Worm_drive">worm drive</a>. The platform is driven by another stepper motor and the worm drive can be manually controlled 
+12. Eventually, all parts are combined together and the Tank is complete
+13. During the final demo, because we lack of power we had to use different external power to power the Tank
+14. Demo video:</p>
+<iframe src="https://drive.google.com/file/d/1gscPZbdwFJ_PkWy-oAtVZ0yiK43rrHJb/preview" width="640" height="480"></iframe>
+
 <h2 id="my-role-in-the-project">My role in the project</h2>
+<ol>
+<li>I mainly handled the design of all Lego structures and the design of circuits and layouts</li>
+<li>I was also responsible for the Verilog code of the stepper motor</li>
+</ol>
 <h2 id="conclusion">Conclusion</h2>
+<ol>
+<li>Huge thanks to the lecturer of the course Professor <a href="http://nthucad.cs.nthu.edu.tw/~cthuang/">Chih-Tsun Huang</a></li>
+<li>Unlimited thanks to my best partner Edward Wei Ding for the great help and support</li>
+<li>As Wei Ding and I grew interests in the world of FPGA, we later on became the TA for this course. </li>
+</ol>
                 
               
               
