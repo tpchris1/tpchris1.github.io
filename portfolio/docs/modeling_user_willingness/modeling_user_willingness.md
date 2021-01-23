@@ -20,8 +20,9 @@ Under the implementation of GDPR(General Data Protection Regulation) since 2018,
 Flowchart of our model
 ![](Pics/2021-01-22-00-03-36.png)
 
-## Current Research Comparioson
+### Current Research Comparioson
 > Social network now plays an important role in everyone's life, therefore the protection of eyeryone's data becomes an important question. The following paragraph will focus solely on the relationship between user willingness and their behavior and data
+
 ### User Consent Analysis
 1. The elements which affect social group willingness are as following:
     - Privacy Paradox 
@@ -84,7 +85,7 @@ Flowchart of our model
 3. The accuracy can be further improved if more user data can be collected.
 4. Also, as described above, the users' willingness is highly related to one's personality as well, so maybe inspect the content of the posts to identify the personality would be a good break.
 
-### Active Learning
+## Active Learning
 1. As our research move on to the next level, we found out that we lack of data
 2. Our research is 'small-dataset', 'low cost to achieve non-labelled data' and 'high cost to label each data'.
 3. Therefore, it is a perfect fit for Active Learning
