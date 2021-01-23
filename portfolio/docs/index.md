@@ -6,7 +6,7 @@ hide: navigation # Hide navigation
 
 ##### *A show case of all Yi-Chun Chang's work*
 
-> ## For UW committee, please check the first 3~5 projects, Thank you!
+<!-- > ## For UW committee, please check the first 3~5 projects, Thank you! -->
 
 ## Introduction
 1. This is the a mkdocs website to demo projects 
