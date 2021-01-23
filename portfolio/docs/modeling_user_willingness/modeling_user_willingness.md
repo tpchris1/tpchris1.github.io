@@ -2,9 +2,8 @@
 
 ##### *Help to collect your data from social network faster*
 
-## Introduction
-1. A Python Machine Learning Model that helps to collect data from social network in a more efficient fashion
-2. This is my Bachelor Thesis 
+## Abstract
+As the social network becoming one of the most important parts in our daily life, the data we produce while interacting with the social networks became a valuable asset. Therefore, the protection over these data are escalating day by day. However, the research which requires to use the data from social networks can not be conducted smoothly. To gather the data, a lot of time was wasted. Therefore, my team and I implemented a Python Machine Learning model that helps to collect data from social network in a more efficient fashion by judging the willingness of the user group intelligently.
 
 ## Problem Research
 Under the implementation of GDPR(General Data Protection Regulation) since 2018, Social network companies like Facebook and Twitter would apply more protection to their data. However, in order to research on topics regarding social networks, data collection would become harder. Hence, we would like to acquire the public data on social network and analyze them through machine learning model based on the individual elements and situational elements. Eventually, we would like to find users who are more likely to provide their private data through our model. 
@@ -120,7 +119,7 @@ Model of the Active Learning
 3. Furthermore, I handled most of the implementation of the Active Learning's query strategies
 
 ## Conclusion
-1. This Project brought me great impact over ML
+1. As my Bachelor's thesis, this Project brought me great impact over ML
 2. Its the very first big scale ML project
 3. I not only learned the programming of ML but also the proper way of conducting research on ML-related issues
 4. The project also increased my interests on the social computing

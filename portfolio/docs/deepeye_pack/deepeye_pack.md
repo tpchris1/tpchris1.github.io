@@ -1,6 +1,6 @@
 # deepeye_pack
 
-##### *A Lego Tank!!*
+##### *An automatic data visualization Python package*
 
 ## Introduction
 1. This is a Python package for DeepEye API,can easily visualize data without too much effort. And provide with really simple usage

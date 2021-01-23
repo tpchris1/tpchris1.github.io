@@ -1,6 +1,6 @@
 # The Haunted Village
 
-##### *A Lego Tank!!*
+##### *Escape from the ghosts with you besties on PC!*
 
 ## Introduction
 ## Problem Research
