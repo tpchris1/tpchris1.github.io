@@ -396,6 +396,68 @@
     Implementation Process
   </a>
   
+    <nav class="md-nav" aria-label="Implementation Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understand-deepeye-system-workflow" class="md-nav__link">
+    Understand DeepEye System workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-wrapper-workflow-based-on-the-above" class="md-nav__link">
+    Design wrapper workflow based on the above
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implement-initialization-process-of-wrapper" class="md-nav__link">
+    Implement initialization process of wrapper
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implement-multiple-data-import-methods" class="md-nav__link">
+    Implement multiple data import methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrate-the-deepeye-algorithms-into-wrapper" class="md-nav__link">
+    Integrate the DeepEye algorithms into wrapper
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implement-multiple-output-methods" class="md-nav__link">
+    Implement multiple output methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-the-process-on-multiple-platforms" class="md-nav__link">
+    Testing the process on multiple platforms
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -477,6 +539,68 @@
     Implementation Process
   </a>
   
+    <nav class="md-nav" aria-label="Implementation Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understand-deepeye-system-workflow" class="md-nav__link">
+    Understand DeepEye System workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-wrapper-workflow-based-on-the-above" class="md-nav__link">
+    Design wrapper workflow based on the above
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implement-initialization-process-of-wrapper" class="md-nav__link">
+    Implement initialization process of wrapper
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implement-multiple-data-import-methods" class="md-nav__link">
+    Implement multiple data import methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrate-the-deepeye-algorithms-into-wrapper" class="md-nav__link">
+    Integrate the DeepEye algorithms into wrapper
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implement-multiple-output-methods" class="md-nav__link">
+    Implement multiple output methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-the-process-on-multiple-platforms" class="md-nav__link">
+    Testing the process on multiple platforms
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -510,15 +634,119 @@
 <h5 id="an-automatic-data-visualization-python-package"><em>An automatic data visualization Python package</em></h5>
 <h2 id="introduction">Introduction</h2>
 <ol>
-<li>This is a Python package for DeepEye API,can easily visualize data without too much effort. And provide with really simple usage</li>
-<li>the DeepEye system: https://github.com/TsinghuaDatabaseGroup/DeepEye/tree/master/APIs_Deepeye</li>
+<li>This is a Python package to wrapped up the DeepEye API using Python 2.7</li>
+<li>The DeepEye system is an automatic data visualization system which can easily visualize data without too much effort. It is designed to provide with really simple usage.</li>
+<li>The DeepEye system Github page: <a href="https://github.com/TsinghuaDatabaseGroup/DeepEye/tree/master/APIs_Deepeye">https://github.com/TsinghuaDatabaseGroup/DeepEye/tree/master/APIs_Deepeye</a></li>
+<li>The original paper: <a href="https://ieeexplore.ieee.org/document/8268737">DeepEye: An automatic big data visualization framework</a></li>
 </ol>
 <h2 id="problem-research">Problem Research</h2>
 <ol>
-<li></li>
+<li>Q1: Understand the foundation of DeepEye system</li>
+<li>Q2: Analyze the design of DeepEye APIs</li>
+<li>Q3: Design a set of process to wrap up the APIs</li>
 </ol>
 <h2 id="analyze-process">Analyze Process</h2>
+<ol>
+<li>The traditional process of data visualization can be visualized as following</li>
+</ol>
+<div class="highlight"><pre><span></span><code>- Load Dataset
+- Select Attributes   ←←←←←←
+- Data Transformation      ↑ LOOP
+- Check Visualization →→→→→→
+</code></pre></div>
+
+<ol>
+<li>
+<p>This process is too complex because one set of data can be visualized into many different patterns.</p>
+<blockquote>
+<p>e.g. </p>
+<table>
+<thead>
+<tr>
+<th>Line Chart</th>
+<th>Bar Chart</th>
+<th>Pie Chart</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../Pics/2021-06-06-15-17-01.png" /></td>
+<td><img alt="" src="../Pics/2021-06-06-15-18-43.png" /></td>
+<td><img alt="" src="../Pics/2021-06-06-15-24-23.png" /></td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</li>
+<li>
+<p>And the combinatin of all attributes can cause it too laborious and time-consuming to find the perfect choice for the resulting visualization. </p>
+</li>
+<li>
+<p>Hence, the DeepEye system is to solve the above problems  </p>
+</li>
+<li>
+<p>The DeepEye system can be described as the following parts:</p>
+</li>
+</ol>
+<p><div class="highlight"><pre><span></span><code>1. Visualization Recognition - Whether the chart is good or bad
+2. Visualization Ranking - Which are better charts
+3. Visualization Selection - Select the top-k most suitable charts  
+</code></pre></div>
+6. The architecture of DeepEye system can be illustrated as following:</p>
+<p><img alt="" src="../Pics/2021-06-06-16-23-33.png" /></p>
 <h2 id="implementation-process">Implementation Process</h2>
+<h3 id="overview">Overview</h3>
+<ol>
+<li>Understand DeepEye System workflow</li>
+<li>Design wrapper workflow based on the above</li>
+<li>Implement initialization process of wrapper</li>
+<li>Implement multiple data import methods</li>
+<li>Integrate the DeepEye algorithms into wrapper </li>
+<li>Implement multiple output methods </li>
+<li>Testing the process on multiple platforms</li>
+</ol>
+<h3 id="understand-deepeye-system-workflow">Understand DeepEye System workflow</h3>
+<ol>
+<li>As described in the <a href="#analyze-process">Analyze Process</a></li>
+</ol>
+<h3 id="design-wrapper-workflow-based-on-the-above">Design wrapper workflow based on the above</h3>
+<ol>
+<li>Deepeye-pack should be user-friendly and easy to use</li>
+<li>Based on the 'Query' idea of DB - User can 'query' charts by a set of commands</li>
+<li>The process is concluded as:
+<div class="highlight"><pre><span></span><code>1. Set up the attributes and types of a table
+2. Import the data from file or DB
+3. Choose different methods to generate the visualizations(Learning to rank, Partial order, Diversified ranking)
+4. Output the result in multiple way(html, jsons...)
+</code></pre></div></li>
+</ol>
+<h3 id="implement-initialization-process-of-wrapper">Implement initialization process of wrapper</h3>
+<ol>
+<li>Set up the table info for DeepEye</li>
+<li>User should specify the attributes needed and the types of them accordingly</li>
+<li>Define a class to handle all the methods</li>
+</ol>
+<h3 id="implement-multiple-data-import-methods">Implement multiple data import methods</h3>
+<ol>
+<li>Since the data can be imported from different sources, I need to make sure the data imported from different methods are the same</li>
+<li>The requirements from the lab is to imported from MySQL and csv file. </li>
+<li>For the MySQL method, import relative packages and wrap the package into one command to query all data. Pick attributes needed according to initialization</li>
+<li>For the csv file method, simply import and filter attributes not required.</li>
+</ol>
+<h3 id="integrate-the-deepeye-algorithms-into-wrapper">Integrate the DeepEye algorithms into wrapper</h3>
+<ol>
+<li>Import DeepEye to make sure the algorithms work for the current package.</li>
+<li>Prune the non-required code and make sure it won't hurt the dependency</li>
+</ol>
+<h3 id="implement-multiple-output-methods">Implement multiple output methods</h3>
+<ol>
+<li>When generate multiple charts, the management of the result data is messy</li>
+<li>Clean and file the output data in multiple fashion. Hence, the user can choose on their need</li>
+</ol>
+<h3 id="testing-the-process-on-multiple-platforms">Testing the process on multiple platforms</h3>
+<ol>
+<li>Wrap into package and tested under different OS</li>
+</ol>
 <h2 id="my-role-in-the-project">My role in the project</h2>
 <ol>
 <li>This is a project made during my time @Datalab in Tsinghua University in Beijing</li>
@@ -527,6 +755,9 @@
 <li>Huge thanks to Professor Li and my friend Yuyu Luo</li>
 </ol>
 <h2 id="conclusion">Conclusion</h2>
+<p>As this is my first time working alone on one project, I was not familiar with the environment and the working methods. I was encouraged to learn most of the knowledge through Internet because the algorithms used are pretty much mature for a long time.</p>
+<p>After a basic understanding of the concept of the system, I worked around on their demo websites many times to get a proper idea of how to design my wrapper can be a more popular fashion.</p>
+<p>Besides building the wrapper, I also looked into the implementation of the DeepEye algorithms. Though the fact that I was not capable of building the system on myself, I get in the first contact with deep learning and ranking algorithms which enrich my knowledge a lot. </p>
                 
               
               
