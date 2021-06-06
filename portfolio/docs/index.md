@@ -9,7 +9,7 @@ hide: navigation # Hide navigation
 <!-- > ## For UW committee, please check the first 3~5 projects, Thank you! -->
 
 ## Introduction
-1. This is the a mkdocs website to demo projects 
+1. This is the a mkdocs website to demo projects
 2. You can find all of the projects listed below in a importance-order
 3. Check more about me in my [home page](https://tpchris1.github.io/) 
 
